@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#container {
+  display: flex;
+  gap: 20px;
+}
+
+.display-box {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 2px solid #333;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.display-box img,
+.display-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.blurred {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+#imageContainer,
+#webcamContainer {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+#staticImage,
+#webcamVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#imageCanvas,
+#webcamCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
